@@ -30,7 +30,7 @@ const AdminRoute = ({ children }) => {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar>
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
