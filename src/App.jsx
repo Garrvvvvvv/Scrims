@@ -4,12 +4,13 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import SlotList from "./pages/SlotList";
 import AdminPortal from "./pages/AdminPortal";
-import AdminLoginPage from "./pages/AdminPortal"; // ✅ Corrected import
+import AdminLoginPage from "./pages/AdminPortal"; // Corrected import path
 import HomePage from "./pages/Home";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Footer from "./components/footer";
-import Navbar from "./Components/Navbar.jsx";
+import Footer from "./components/Footer"; // Ensure folder/file casing matches
+import Navbar from "./pages/Navbar.jsx";
+
 
 // List of authorized admin emails
 const ADMIN_EMAILS = ["garvnoor111@gmail.com"]; // Replace with your admin emails
@@ -30,7 +31,7 @@ const AdminRoute = ({ children }) => {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar>
+      <Navbar/> {/* Navbar component as self-closing */}
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
@@ -47,7 +48,7 @@ function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer /> {/* Add the Footer component here */}
+      <Footer /> {/* Footer component as self-closing */}
     </BrowserRouter>
   );
 }
