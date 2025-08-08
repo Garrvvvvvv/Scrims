@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SlideShow from "../components/SlideShow";
+import SlideShow from "../pages/SlideShow";
 
 const mockSlideshowImages = [
   { src: "/images/post1.jpg", alt: "Scrims Poster 1" },

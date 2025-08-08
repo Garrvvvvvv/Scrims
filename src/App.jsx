@@ -8,8 +8,9 @@ import AdminLoginPage from "./pages/AdminPortal"; // Corrected import path
 import HomePage from "./pages/Home";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Footer from "./components/Footer"; // Ensure folder/file casing matches
+
 import Navbar from "./pages/Navbar.jsx";
+import Footer from "./pages/Footer.jsx";
 
 
 // List of authorized admin emails
